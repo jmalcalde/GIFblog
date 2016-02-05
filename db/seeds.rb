@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+20.times do |n|
+  title  = Faker::Book.title
+  gif = Faker::Company.logo
+  votes = Faker::Number.number(2)
+  Post.create!(title:  title,
+               gif: gif,
+               votes: votes)
+end
